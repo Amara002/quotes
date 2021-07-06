@@ -44,13 +44,13 @@ class AppTest {
         BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\LTUC\\Desktop\\401asac\\quotes\\quotes\\app\\src\\main\\java\\quotes\\recentquotes.json"));
         List<Quotes> quotes = gson.fromJson(reader, new TypeToken<List<Quotes>>() {}.getType());
         int min =0;
-        int max = 137;
+        int max = quotes.size()-1;
          Quotes quote = quotes.get((int) (Math.random()*(max-min+1)+min));
         int index = 0;
-        for (int i = 0; i < quotes.size() ; i++) {
+        for (int i = 0; i < quotes.size()-1 ; i++) {
             if(quotes.get(i).getText().equals(quote.getText())){
                 index = i;
             }
         }
-    assertTrue(index >= 0 && index < 138 , "return true if got a random quote from the json file ");    }
+    assertTrue(index >= 0 && index < quotes.size()-1 , "return true if got a random quote from the json file ");    }
 }
