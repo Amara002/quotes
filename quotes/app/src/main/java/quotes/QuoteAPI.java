@@ -20,8 +20,8 @@ public class QuoteAPI {
     @Override
     public String toString() {
         return "QuoteAPI{" +
-                "quote='" + quoteText + ' ' +
-        ", author='" + quoteAuthor + ' ' +
+                "quote='" + quoteText + '\'' +
+        ", author='" + quoteAuthor + '\'' +
         '}';
     }
 }

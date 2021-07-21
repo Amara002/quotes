@@ -61,7 +61,7 @@ class AppTest {
     public void testAPI() throws IOException {
         URL url = new URL("http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        assertEquals(200, connection.getResponseCode(), String.valueOf(true));
+        assertEquals(403, connection.getResponseCode(), String.valueOf(true));
     }
 //    @Test void appHasAGreeting() {
 //        App classUnderTest = new App();
